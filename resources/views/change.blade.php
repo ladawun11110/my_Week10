@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +7,13 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body class="bg-gray-100 font-sans">
 
     <div class="container mx-auto px-4 py-8 max-w-4xl">
         <h1 class="text-3xl font-bold text-gray-800 mb-6">ยินดีต้อนรับสู่หน้าบล็อก (Blog)</h1>
-        <p class="text-gray-600 text-lg">นี่คือหน้าบล็อก... แล้วก็หมดแค่นี้แหละ ไม่มีอะไรจะอ่านหรอก</p>
-        <p></p>
-        <a href="{{ route('blog') }}" class="text-red-500 hover:text-red-700 font-semibold">กลับไปหน้าบล็อก</a>
 
         <!-- วนลูปแสดงรายการบล็อก -->
-        {{-- <div class="space-y-4">
+        <div class="space-y-4">
             @foreach ($blogs as $item)
                 <div class="bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
                     <div>
@@ -30,7 +25,7 @@
 
                     <div>
                         <!-- สถานะ (ปรับใช้ Tailwind แทน Bootstrap) -->
-                        @if ($item->status)
+                        @if($item->status)
                             <span class="px-3 py-1 text-sm text-green-700 bg-green-100 rounded-full font-medium">เผยแพร่</span>
                         @else
                             <span class="px-3 py-1 text-sm text-red-700 bg-red-100 rounded-full font-medium">ฉบับร่าง</span>
@@ -38,9 +33,8 @@
                     </div>
                 </div>
             @endforeach
-        </div> --}}
+        </div>
     </div>
 
 </body>
-
 </html>
